@@ -1,47 +1,64 @@
-p {
-    color : darkblue;
+.register{
+    height: 40px;
+    width: 100px;
+    background-color: teal;
+    color: white;
+    position: relative;
 }
-.mobil {
-    color: darkgreen;
+.promo {
+    position: absolute;
+    background-color: yellow;
+    padding: 2px, 10px;
+    color: black;
+    border: 1px solid green;
+    border-radius: 20px;
+    rotate: 45deg;
+    top: -5px;
+    right: -25px;
 }
-#bmw {
-    text-decoration: underline;
-    color: aquamarine;
+.kontak {
+    height: 70px;
+    width: 70px;
+    background-color: darkred;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    align-content: center;
+    border-radius: 50%;
 }
-#merci {
-    text-decoration: overline;
-    color: chartreuse;
+.navbar {
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    align-content: center;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
 }
-body {
-    /* background-color: darkgrey;
-    background: linear-gradient(90deg, black, darkgrey, white); */
-    background: url("https://cdnb.artstation.com/p/assets/images/images/056/756/425/original/bencin-studios-pixelartbackground.gif?1670002516");
-    background-size: cover;
+.navbar::-webkit-scrollbar {
+    background-color: grey;
+    transition: background-color 200ms linear;
 }
-.text{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.navbar-second {
+    height: 30px;
+    width: 100%;
+    background-color: grey;
     color: black;
     text-align: center;
+    align-content: center;
+    position: sticky;
+    top: 80px;
 }
-.konten {
-    background-color:cornflowerblue;
-    width: 200px;
-    height: 200px;
-    padding: 10px;
-    margin: 10px;
-    border: 10px;
-    border-radius: 10px;
+@media screen and (max-width: 768px) {
+    .navbar {
+        background-color: grey;
+    }
 }
-.text::first-letter{
-    font-size: 36px;
-}
-.text:hover:first-letter {
-    color: darkred;
-}
-.konten:hover{
-    background-color: whitesmoke;
-    cursor: pointer;
-}
-p::first-line{
-    color: white;
+@media screen and (max-width: 480px) {
+    .navbar {
+        background-color: red;
+    }
 }

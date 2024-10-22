@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+}
+#content {
+    max-width: 300px;
+    max-height: 450px;
+    margin: 0 auto;
+    background-color: black;
+    display: grid;
+    gap: 7px;
+    border: 20px solid black;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+#content div {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    color: black;
+}
+#content .kotak1 {
+    grid-column: 1 / 5;
+    background-color: green;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: end;
+}
+#content .kotak2 {
+    background-color: red;
+    color: white;
+}
+#content .kotak3 {
+    background-color: darkblue;
+    color: white;
+}
+#content .kotak4{
+    background-color: darkblue;
+    color: white;
+}
+#content .kotak5{
+    background-color: darkblue;
+    color: white;
+}
+#content .kotak9{
+    background-color: darkblue;
+    color: white;
+}
+#content .kotak13{
+    align-content: center;
+    text-align: center;
+    grid-column: 4;
+    grid-row: 4 / 7;
+    background-color: green;
+    color: white;
+}
+button {
+    height: 50px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: large;
+}
+.kotak13 {
+    align-content: center;
+    text-align: center;
+    grid-column: 4;
+    grid-row: 4 / 7;
+    background-color: green;
+    color: white;
+    height: 100%;
+}
