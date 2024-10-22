@@ -1,0 +1,47 @@
+p {
+    color : darkblue;
+}
+.mobil {
+    color: darkgreen;
+}
+#bmw {
+    text-decoration: underline;
+    color: aquamarine;
+}
+#merci {
+    text-decoration: overline;
+    color: chartreuse;
+}
+body {
+    /* background-color: darkgrey;
+    background: linear-gradient(90deg, black, darkgrey, white); */
+    background: url("https://cdnb.artstation.com/p/assets/images/images/056/756/425/original/bencin-studios-pixelartbackground.gif?1670002516");
+    background-size: cover;
+}
+.text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    text-align: center;
+}
+.konten {
+    background-color:cornflowerblue;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 10px;
+    border-radius: 10px;
+}
+.text::first-letter{
+    font-size: 36px;
+}
+.text:hover:first-letter {
+    color: darkred;
+}
+.konten:hover{
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+p::first-line{
+    color: white;
+}

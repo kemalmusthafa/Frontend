@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+<form>
+    <input type="text" placeholder="masukkan nama"/>
+    <input type="password" required/>
+    <input type="checkbox"/>
+    <input type="radio"/>
+    <input type="number" min="1" max="10"/>
+    <input type="submit" value="ok"/>
+    <textarea rows="3" cols="64"></textarea>
+</form>
+<button type="button" onclick="doSomething()">submit</button>
+<p>Apa warna favoritmu</p>
+<select>
+    <option>Merah</option>
+    <option selected>Biru</option>
+    <option>Kuning</option>
+</select>
+<fieldset>
+    <legend>Data Diri</legend>
+    <p>
+        <label for="nama">Nama</label>
+        <input type="text" name="nama"/>
+    </p>
+    <p>
+        <label for="usia">Usia</label>
+        <input type="number" name="usia "/>
+    </p>
+</fieldset>
+<script>
+    function doSomething() {
+        alert('anda telah mengklik sebuah button')
+    }
+</script>
+</body>
+</html>
