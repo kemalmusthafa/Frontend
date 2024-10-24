@@ -1,0 +1,35 @@
+.navbar {
+    height: 60px;
+    width: 100%;
+    background-color: teal;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-family: sans-serif;
+    font: bold;
+}
+.navbar p {
+    flex: 1;
+}
+.menu {
+    display: flex;
+    gap: 50px;
+    color: white;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+.menu a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    transform: translate(0, -2px);
+}
+.logo {
+    display: flex;
+    height: 50px;;
+    width: 50px;
+}
