@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (max-width: 640px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem; /* Adjust for mobile */
+    }
+
+    .btn {
+        width: 100%; /* Make buttons full width */
+    }
+
+    .navbar > div {
+        width: 100%; /* Ensure full width for centering */
+    }
+}

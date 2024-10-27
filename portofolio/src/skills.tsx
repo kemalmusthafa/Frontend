@@ -31,23 +31,17 @@ function Skills() {
       {/* Content Section Below */}
       <div className="flex flex-col items-center justify-center h-full text-center">
         <h1 className="text-yellow-200 text-4xl font-bold">SKILLS</h1>
-        <div className="w-full max-w-3xl mt-8">
-        <Marquee
-          pauseOnHover
-          speed={1000}
-          gradient={false}
-          className="flex items-center gap-1"
-        >
-          <img src={img1} alt="HTML" className="marquee-image" style={{width: '60px'}}/>
-          <img src={img2} alt="CSS" className="marquee-image" style={{width: '60px'}}/>
-          <img src={img3} alt="JavaScript" className="marquee-image"style={{width: '60px'}}/>
-          <img src={img4} alt="PHP" className="marquee-image"style={{width: '60px'}}/>
-          <img src={img5} alt="TypeScript" className="marquee-image"style={{width: '60px'}}/>
-          <img src={img6} alt="Laravel" className="marquee-image"style={{width: '60px'}}/>
-          <img src={img7} alt="React" className="marquee-image"style={{width: '60px'}}/>
-          <img src={img8} alt="Bootstrap" className="marquee-image"style={{width: '60px'}}/>
-          <img src={img9} alt="CodeIgniter" className="marquee-image"style={{width: '60px'}}/>
-        </Marquee>
+        <div className="w-full max-w-3xl mt-20">
+          <Marquee
+            pauseOnHover
+            speed={80}
+            gradient={false}
+            className="flex items-center"
+          >
+            {[img1, img2, img3, img4, img5, img6, img7, img8, img9, img1, img2, img3, img4, img5, img6, img7, img8, img9].map((img, index) => (
+              <img key={index} src={img} alt={`Skill ${index + 1}`} className="marquee-image" style={{width: '120px'}}/>
+            ))}
+          </Marquee>
         </div>
       </div>
     </div>
