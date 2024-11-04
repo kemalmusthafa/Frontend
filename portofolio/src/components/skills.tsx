@@ -30,22 +30,23 @@ function Skills() {
             className="flex items-center"
           >
             {[
-              "img/logo-html-5-256.png",
-              "img/logo-css-3-256.png",
-              "img/logo-javascript-256.png",
-              "img/logo-php-256.png",
-              "img/typescript-256.png",
-              "img/logo-laravel-256.png",
-              "img/logo-react-256.png",
-              "img/bootstrap-256.png",
-              "img/codeigniter-logo_brandlogos.net_ydmii.png",
+              "/img/logo-html-5-256.png",
+              "/img/logo-css-3-256.png",
+              "/img/logo-javascript-256.png",
+              "/img/logo-php-256.png",
+              "/img/typescript-256.png",
+              "/img/logo-laravel-256.png",
+              "/img/logo-react-256.png",
+              "/img/bootstrap-256.png",
+              "/img/codeigniter-logo_brandlogos.net_ydmii.png",
+              "/img/nextjs.512x512.png"
             ].map((img, index) => (
-              <img
+              <Image
                 key={index}
                 src={img}
                 alt={`Skill ${index + 1}`}
-                width="120"
-                height="120"
+                width={120}
+                height={120}
                 className="marquee-image"
               />
             ))}

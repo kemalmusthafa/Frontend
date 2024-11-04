@@ -20,7 +20,7 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  let scrollActive = scroll ? "py-6 bg-white shadow text-black" : "py-4";
+  const scrollActive = scroll ? "py-6 bg-white shadow text-black" : "py-4";
   return (
     <div
       className={`navbar bg-base-100 fixed z-50 justify-between px-4 sm:px-20 box-border transition-all ${scrollActive}`}
