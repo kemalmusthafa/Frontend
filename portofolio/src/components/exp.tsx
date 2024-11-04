@@ -3,14 +3,14 @@ function Exp() {
     <div className="bg-white flex text-black w-screen">
       <div className="mx-[12px] my-0 md:mx-20 md:my-0">
         <p className="flex flex-1 justify-center items-center text-justify mx-6 my-0 md:mx-">
-          "As a Fullstack Web Developer, I bridge the gap between intuitive user
+          As a Fullstack Web Developer, I bridge the gap between intuitive user
           interfaces and robust server-side solutions. On the front-end, I craft
           responsive and dynamic experiences using technologies like HTML, CSS,
           Bootstrap, React.js, Next.js, TailwindCSS, and Vite. On the back-end,
           I develop powerful and scalable applications using frameworks such as
           Laravel and CodeIgniter. With a comprehensive skill set that spans
           both client-side and server-side development, I deliver full-cycle web
-          solutions that are efficient, modern, and impactful."
+          solutions that are efficient, modern, and impactful.
         </p>
         <div className="divider divider-neutral mx-8 my-14"></div>
         <h1 className="text-center text-lg font-black">EXPERIENCE</h1>
