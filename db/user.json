@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "60f9",
+      "username": "Andi",
+      "email": "andi@gmail.com",
+      "password": "Asd1234"
+    },
+    {
+      "id": "b89a",
+      "username": "Budi",
+      "email": "budi@gmail.com",
+      "password": "Asd1234"
+    },
+    {
+      "id": "2f1e",
+      "username": "Caca",
+      "email": "cac@gmail.com",
+      "password": "Asd123"
+    },
+    {
+      "id": "9650",
+      "username": "Dedi",
+      "email": "dedi@gmail.com",
+      "password": "Asd1234"
+    },
+    {
+      "id": "4918",
+      "username": "jajang",
+      "email": "jajang@gmail.com",
+      "password": "Asd1234"
+    }
+  ]
+}
