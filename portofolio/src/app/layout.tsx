@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import {Poppins} from "next/font/google"
+import Navbar from "@/components/navbar";
+import Contact from "@/components/contact";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -19,11 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`Poppins.className antialiased`}
       >
+        <Navbar/>
         {children}
+        <Contact/>
       </body>
     </html>
   );

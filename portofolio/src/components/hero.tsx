@@ -15,10 +15,12 @@ function Hero() {
 
         <div className="hero-content flex flex-col lg:flex-row items-center lg:items-start gap-10 text-neutral-content px-5 lg:px-20">
           <div className="w-48 h-48 sm:w-64 sm:h-64 overflow-hidden rounded-2xl shadow-2xl">
-            <img
+            <Image
               src="/img/IMG_5170.png"
               className="w-full h-full object-cover"
               alt="Cropped Image"
+              height={200}
+              width={200}
             />
           </div>
 

@@ -1,6 +1,6 @@
 function Exp() {
     return (
-      <div className="bg-white flex">
+      <div className="bg-white flex text-black">
         <div> 
         <h1 className="text-center text-lg font-black">
           EXPERIENCE

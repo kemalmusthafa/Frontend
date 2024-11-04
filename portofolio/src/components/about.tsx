@@ -2,7 +2,7 @@ import Image from "next/image"
 
 function About() {
     return (
-      <div className="relative bg-[#0b1e5e] w-screen min-h-screen flex flex-col items-center gap-10 p-5">
+      <div className="relative bg-[#0b1e5e] w-screen min-h-screen flex flex-col items-center gap-10 p-5" id="about">
         {/* About Title */}
         <div className="text-center">
           <h1 className="text-4xl font-bold text-yellow-200 mb-5 mt-20">ABOUT</h1>
@@ -12,25 +12,29 @@ function About() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-20">
           {/* Logo Unjani */}
           <div className="w-[120px] h-[120px] sm:w-[150px] sm:h-[155px] overflow-hidden shadow-lg rounded-lg">
-            <img
+            <Image
               src="/img/Logo_unjani.png"
               alt="Logo Unjani"
               className="w-full h-full object-cover"
+              height={200}
+              width={200}
             />
           </div>
   
           {/* Purwadhika Logo */}
           <div className=" w-80 h-20 md:w-[300px] md:h-[100px] overflow-hidden rounded-xl shadow-lg">
-            <img
+            <Image
               src="/img/purwadhika.png"
               alt="Purwadhika"
               className="w-full h-full object-cover"
+              height={200}
+              width={200}
             />
           </div>
         </div>
   
         {/* SVG Wave at the Bottom */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden" id="exp">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 320"
