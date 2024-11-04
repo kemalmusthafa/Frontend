@@ -1,10 +1,19 @@
 function Exp() {
-    return (
-      <div className="bg-white flex text-black">
-        <div> 
-        <h1 className="text-center text-lg font-black">
-          EXPERIENCE
-        </h1>
+  return (
+    <div className="bg-white flex text-black w-screen">
+      <div className="mx-[12px] my-0 md:mx-20 md:my-0">
+        <p className="flex flex-1 justify-center items-center text-justify mx-6 my-0 md:mx-">
+          "As a Fullstack Web Developer, I bridge the gap between intuitive user
+          interfaces and robust server-side solutions. On the front-end, I craft
+          responsive and dynamic experiences using technologies like HTML, CSS,
+          Bootstrap, React.js, Next.js, TailwindCSS, and Vite. On the back-end,
+          I develop powerful and scalable applications using frameworks such as
+          Laravel and CodeIgniter. With a comprehensive skill set that spans
+          both client-side and server-side development, I deliver full-cycle web
+          solutions that are efficient, modern, and impactful."
+        </p>
+        <div className="divider divider-neutral mx-8 my-14"></div>
+        <h1 className="text-center text-lg font-black">EXPERIENCE</h1>
         <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
           <li>
             <div className="timeline-middle">
@@ -31,9 +40,9 @@ function Exp() {
               </div>
               Esports Indonesia is the governing organization for electronic
               sports under the Indonesian National Sports Committee. Esports
-              Indonesia Kota Bandung serves as a branch management under PBESI. I
-              have approximately five months of experience, from August 2020 to
-              January 2021, as a management member.
+              Indonesia Kota Bandung serves as a branch management under PBESI.
+              I have approximately five months of experience, from August 2020
+              to January 2021, as a management member.
             </div>
             <hr />
           </li>
@@ -58,10 +67,11 @@ function Exp() {
                 Dinas Budaya dan Pariwisata Kota Bandung
               </div>
               <div className="timeline-end mb-10 md:text-start font-bold">
-                <time className="font-mono italic">2022 - 2023</time> (Internship){" "}
+                <time className="font-mono italic">2022 - 2023</time>{" "}
+                (Internship){" "}
               </div>
-              As a Junior Programmer Intern, I conducted requirement research and
-              provided recommendations for the TIC website development. I
+              As a Junior Programmer Intern, I conducted requirement research
+              and provided recommendations for the TIC website development. I
               participated in creating promotional content, designed the website
               using tools like Balsamiq and Figma, and implemented the design
               using the Laravel framework with PHP, JavaScript, MySQL, and
@@ -120,10 +130,11 @@ function Exp() {
                 (College Project){" "}
               </div>
               I conducted research for the Queniee Pethouse Treatments system,
-              designed the system using Balsamiq and Figma, also managed business
-              processes with JIRA. This involved creating sprint planning, product
-              backlogs, tasks, and schedules for developers, as well as
-              implementing all business needs and processes using JIRA.
+              designed the system using Balsamiq and Figma, also managed
+              business processes with JIRA. This involved creating sprint
+              planning, product backlogs, tasks, and schedules for developers,
+              as well as implementing all business needs and processes using
+              JIRA.
             </div>
             <hr />
           </li>
@@ -145,22 +156,23 @@ function Exp() {
             </div>
             <div className="timeline-start mb-10 md:text-end">
               <div className="text-lg font-black">
-                Penerapan Algoritma K-Nearest Neighbor (KNN) Dengan Fitur Relief-F
-                Dalam Penentuan Status Stunting
+                Penerapan Algoritma K-Nearest Neighbor (KNN) Dengan Fitur
+                Relief-F Dalam Penentuan Status Stunting
               </div>
               <div className="timeline-start mb-10 md:text-end font-bold">
                 <time className="font-mono italic">2023</time> (Journal and
                 Thesis){" "}
               </div>
-              In this thesis, I developed machine learning and classification for
-              stunting in toddlers. Based on the research method, we can classify
-              and identify important data for determining the stunting status of
-              toddlers using the KNN algorithm with the Relief-F feature.
+              In this thesis, I developed machine learning and classification
+              for stunting in toddlers. Based on the research method, we can
+              classify and identify important data for determining the stunting
+              status of toddlers using the KNN algorithm with the Relief-F
+              feature.
             </div>
           </li>
         </ul>
-        </div>
       </div>
-    );
-  }
-  export default Exp;
+    </div>
+  );
+}
+export default Exp;
