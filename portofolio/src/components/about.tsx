@@ -13,8 +13,8 @@ function About() {
           {/* Logo Unjani */}
           <div className="w-[120px] h-[120px] sm:w-[150px] sm:h-[155px] overflow-hidden shadow-lg rounded-lg">
             <Image
-              src="/img/Logo_unjani.png"
-              alt="Logo Unjani"
+              src="/img/LogoUnjani.png"
+              alt="LogoUnjani"
               className="w-full h-full object-cover"
               height={200}
               width={200}
