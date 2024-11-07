@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface ICardBlog {
@@ -19,8 +20,8 @@ export default function Cards({
   slug,
 }: ICardBlog) {
   return (
-    <div className="flex flex-col w-[300px] h-[500px] shadow-lg rounded-lg">
-      <div className="flex rounded-t-lg justify-center overflow-hidden">
+    <div className="container bg-white flex flex-col w-[300px] h-[500px] shadow-lg rounded-lg">
+      <div className="container flex rounded-t-lg justify-center overflow-hidden">
         <Image
           src={`https:${thumbnail}`}
           alt="image"
@@ -45,7 +46,7 @@ export default function Cards({
             <div className="flex w-[100px] h-[10px] text-xs font-thin">{`${email}`}</div>
           </div>
         </div>
-        <div className="flex h-[50px]"><button className="bg-green-800 w-[100px] h-[40px] text-center text-white p-1 rounded-lg text-sm hover:bg-green-700">Read more.</button></div>
+        <div className="flex h-[50px]"><Link href={`/blog/${slug}`} className="container flex justify-center items-center bg-green-800 w-[100px] h-[40px] text-center text-white p-1 rounded-lg text-sm hover:bg-green-700">Read more.</Link></div>
       </div>
     </div>
   );
