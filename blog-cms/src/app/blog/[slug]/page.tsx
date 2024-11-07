@@ -3,8 +3,6 @@ import Content from "@/components/content";
 import Wrapper from "@/components/wrapper";
 import { getBlogs, getBlogsSlug } from "@/libs/blog";
 import { IBlog } from "@/types/blog";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import Image from "next/image";
 import React from "react";
 
 export const generateStaticParams = async () => {

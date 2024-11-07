@@ -1,4 +1,5 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Document } from "@contentful/rich-text-types";
 import Image from "next/image";
 import React from "react";
 
@@ -8,7 +9,7 @@ interface IContent {
   author: string;
   date: string;
   thumbnail: string;
-  content: any;
+  content: Document;
 }
 
 export default function Content({
