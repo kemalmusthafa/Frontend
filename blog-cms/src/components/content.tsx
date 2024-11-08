@@ -2,6 +2,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Document } from "@contentful/rich-text-types";
 import Image from "next/image";
 import React from "react";
+import ShareButton from "./share";
 
 interface IContent {
   title: string;
@@ -10,6 +11,7 @@ interface IContent {
   date: string;
   thumbnail: string;
   content: Document;
+  slug: string;
 }
 
 export default function Content({
@@ -19,14 +21,20 @@ export default function Content({
   date,
   thumbnail,
   content,
+  slug,
 }: IContent) {
   return (
     <div className="flex flex-col justify-items-start items-start h-screen w-[800px] gap-10">
       <div className="flex">
-        <h1 className="font-bold text-2xl">Category : {`${category}`}</h1>
+        <h1 className="font-bold text-2xl">
+          Category : <span className="text-blue-500">{`${category}`}</span>
+        </h1>
       </div>
       <div className="flex">
         <h1 className="font-bold text-4xl">{`${title}`}</h1>
+      </div>
+      <div className="md:hidden">
+        <ShareButton slug={`${slug}`} />
       </div>
       <div className="flex flex-row gap-5">
         <div>
@@ -44,9 +52,7 @@ export default function Content({
           height={600}
         />
       </div>
-      <div className="">
-        {documentToReactComponents(content)}
-        </div>
+      <div className="">{documentToReactComponents(content)}</div>
     </div>
   );
 }

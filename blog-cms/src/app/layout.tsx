@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   description:
     "Berbagai informasi, berita, insights, hingga tips terbaru seputar dunia dan skill digital.",
   icons: {
-    icon: "/reddit.png"
-  }
+    icon: "/reddit.png",
+  },
 };
 
 export default function RootLayout({
@@ -36,9 +36,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        {children}
-        {/* <Footer/> */}
+          <Navbar />
+          {children}
       </body>
     </html>
   );

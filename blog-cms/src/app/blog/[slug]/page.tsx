@@ -1,5 +1,6 @@
 import Category from "@/components/category";
 import Content from "@/components/content";
+import ShareButton from "@/components/share";
 import Wrapper from "@/components/wrapper";
 import { getBlogs, getBlogsSlug } from "@/libs/blog";
 import { IBlog } from "@/types/blog";
@@ -13,37 +14,36 @@ export const generateStaticParams = async () => {
   }));
 };
 
-export async function generateMetadata({params} : {params: {slug : string}}){
-    const blog: IBlog = await getBlogsSlug (params.slug)
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const blog: IBlog = await getBlogsSlug(params.slug);
 
-    return {
-        title : blog.fields.title,
-        description: blog.fields.title,
-        authors : blog.fields.author.fields.name,
-        openGraph: {
-            images: [`https:${blog.fields.thumbnail.fields.file.url}`]
-        }
-    }
+  return {
+    title: blog.fields.title,
+    description: blog.fields.title,
+    authors: blog.fields.author.fields.name,
+    openGraph: {
+      images: [`https:${blog.fields.thumbnail.fields.file.url}`],
+    },
+  };
 }
 
-export default async function BlogDetail({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function BlogDetail({ params }: { params: { slug: string } }) {
   const blog: IBlog = await getBlogsSlug(params.slug);
-  console.log(blog.fields.content);
+
   return (
-    <div className="container flex flex-1 w-screen h-screen justify-between">
+    <div className="flex flex-col lg:flex-row w-full h-auto lg:h-screen justify-between px-4 lg:px-0">
       <Wrapper>
-        <div className="flex gap-10 my-10">
-          <div className="text-green">
-            <Category
-              title={blog.fields.title}
-              category={blog.fields.category}
-            />
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 my-10">
+          <div className="lg:w-1/4 flex flex-col items-center lg:items-start">
+            <div className="hidden lg:flex">
+              <Category title={blog.fields.title} category={blog.fields.category} />
+            </div>
+            <div className="hidden lg:flex mt-5">
+              <ShareButton slug={blog.fields.slug} />
+            </div>
           </div>
-          <div>
+
+          <div className="flex-1 w-full lg:w-2/4 px-4">
             <Content
               title={blog.fields.title}
               category={blog.fields.category}
@@ -51,9 +51,11 @@ export default async function BlogDetail({
               date={blog.fields.date}
               thumbnail={blog.fields.thumbnail.fields.file.url}
               content={blog.fields.content}
+              slug={blog.fields.slug}
             />
           </div>
-          <div>kanan</div>
+
+          <div className="hidden lg:flex lg:w-1/4"></div>
         </div>
       </Wrapper>
     </div>
