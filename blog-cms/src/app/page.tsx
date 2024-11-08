@@ -5,10 +5,9 @@ import { IBlog } from "@/types/blog";
 
 export default async function Home() {
   const data: IBlog[] = await getBlogs();
-  console.log(data);
 
   return (
-    <div className="container mx-auto px-4 flex flex-1 justify-center items-center w-full h-full">
+    <div className="container mx-auto px-4 flex flex-1 justify-center items-center w-[100vw] h-auto">
       <Wrapper>
         <div className="flex flex-col md:flex-row gap-10 md:gap-10 my-10">
           {data.map((item, idx) => {

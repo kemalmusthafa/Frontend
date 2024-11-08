@@ -7,7 +7,7 @@ interface ICategory {
 
 export default function Category({ title, category }: ICategory) {
   return (
-    <div className="flex flex-col bg-slate-50 w-[200px] h-auto rounded-lg gap-10 p-5">
+    <div className="flex flex-col">
       <div className="flex">
         <h1>{`${title}`}</h1>
       </div>

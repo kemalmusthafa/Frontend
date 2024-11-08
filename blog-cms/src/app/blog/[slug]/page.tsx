@@ -1,8 +1,9 @@
 import Category from "@/components/category";
 import Content from "@/components/content";
+import RecommendationBlog from "@/components/recommendations";
 import ShareButton from "@/components/share";
 import Wrapper from "@/components/wrapper";
-import { getBlogs, getBlogsSlug } from "@/libs/blog";
+import { getBlogRecom, getBlogs, getBlogsSlug } from "@/libs/blog";
 import { IBlog } from "@/types/blog";
 import React from "react";
 
@@ -17,6 +18,7 @@ export const generateStaticParams = async () => {
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const blog: IBlog = await getBlogsSlug(params.slug);
 
+
   return {
     title: blog.fields.title,
     description: blog.fields.title,
@@ -29,14 +31,17 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 export default async function BlogDetail({ params }: { params: { slug: string } }) {
   const blog: IBlog = await getBlogsSlug(params.slug);
+  const blogNe: IBlog[] = await getBlogRecom(params.slug);
 
   return (
     <div className="flex flex-col lg:flex-row w-full h-auto lg:h-screen justify-between px-4 lg:px-0">
       <Wrapper>
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 my-10">
           <div className="lg:w-1/4 flex flex-col items-center lg:items-start">
-            <div className="hidden lg:flex">
+            <div className="hidden lg:flex flex-col bg-slate-50 w-auto h-auto rounded-lg gap-10 p-5">
               <Category title={blog.fields.title} category={blog.fields.category} />
+              <div className="flex flex-1 font-semibold">Recommendation : </div>
+              <RecommendationBlog blogs={blogNe}/>
             </div>
             <div className="hidden lg:flex mt-5">
               <ShareButton slug={blog.fields.slug} />

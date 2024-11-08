@@ -41,8 +41,8 @@ const share: IShare[] = [
 export default function ShareButton({slug}: {slug: string}) {
     const domain = "https://reddit-blog.vercel.app/blog/"
   return (
-    <div className="flex flex-col text-xl font-bold justify-start gap-5">
-      <p>Bagikan</p>
+    <div className="flex flex-col text-xs font-bold justify-start gap-5">
+      <p>Bagikan :</p>
       <div className="flex flex-row text-2xl gap-3">
         {share.map((item, idx) => {
           return (
