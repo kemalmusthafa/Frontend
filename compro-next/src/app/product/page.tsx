@@ -2,8 +2,29 @@ import Divider from "@/components/divider";
 import NewCollection from "@/components/newcollection";
 import ProductMan from "@/components/productman";
 import ProductWomen from "@/components/productwomen";
+import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Product",
+  description: "Find The Best Fashion Style For You.",
+  keywords: "T-Shirt Neon, T-Shirt Neon Yellow, T-Shirt Black, T-Shirt Blacked, Hoodie Black, Hoodie Blaked, Dress, Sweaters",
+  openGraph: {
+    title: "Product | Find The Best Fashion Style For You.",
+    description: "Unwrap the New Season! Presenting our new collection—bold, stylish, and made for you. Elevate your wardrobe with these must-have pieces!",
+    url: "https://msth-clothing.vercel.app/",
+    type: "website",
+    images: [
+      {
+        url: "/product.png",
+        width: 1200,
+        height: 800,
+        alt: "MSTH. - Home"
+      }
+    ]
+  }
+}
 
 export default function Product() {
   return (

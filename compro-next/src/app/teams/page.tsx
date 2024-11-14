@@ -1,8 +1,29 @@
 "use client";
 
 import HeadTeam from "@/components/teams";
+import { Metadata } from "next";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+
+export const metadata: Metadata = {
+  title: "Teams",
+  description: "Find The Best Fashion Style For You.",
+  keywords: "T-Shirt Neon, T-Shirt Neon Yellow, T-Shirt Black, T-Shirt Blacked, Hoodie Black, Hoodie Blaked, Dress, Sweaters",
+  openGraph: {
+    title: "Teams | Find The Best Fashion Style For You.",
+    description: "Unwrap the New Season! Presenting our new collection—bold, stylish, and made for you. Elevate your wardrobe with these must-have pieces!",
+    url: "https://msth-clothing.vercel.app/",
+    type: "website",
+    images: [
+      {
+        url: "/teams.png",
+        width: 1200,
+        height: 800,
+        alt: "MSTH. - Home"
+      }
+    ]
+  }
+}
 
 interface Person {
   login: { uuid: string };
