@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About | Find The Best Fashion Style For You.",
     description: "Unwrap the New Season! Presenting our new collection—bold, stylish, and made for you. Elevate your wardrobe with these must-have pieces!",
-    url: "https://msth-clothing.vercel.app/",
+    url: "https://msth-clothing.vercel.app/about",
     type: "website",
     images: [
       {

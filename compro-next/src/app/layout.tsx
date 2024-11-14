@@ -17,7 +17,10 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "MSTH. | %s",
+  title: {
+    template: "MSTH. | %s",
+    default: "MSTH."
+  },
   description: "Find the best fashion style for you.",
 };
 
