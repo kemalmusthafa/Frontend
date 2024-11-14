@@ -2,8 +2,15 @@ import React, { useEffect, useState } from "react";
 import Divider from "./divider";
 import Image from "next/image";
 
+interface Person {
+  login: { uuid: string };
+  name: { first: string; last: string };
+  email: string;
+  picture: { medium: string };
+}
+
 export default function HeadTeam() {
-  const [people, setPeople] = useState<any[]>([]);
+  const [people, setPeople] = useState<Person[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -43,7 +50,7 @@ export default function HeadTeam() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 justify-items-center p-5">
-        {people.map((person: any) => (
+        {people.map((person) => (
           <div
             key={person.login.uuid}
             className="bg-white h-[300px] w-[250px] flex flex-col justify-center items-center shadow-lg relative"
@@ -51,12 +58,8 @@ export default function HeadTeam() {
             <div className="flex bg-teal-700 w-[50px] h-[30px] items-center justify-center absolute top-0 right-0 font-mono rounded-bl-3xl">
               CEO
             </div>
-            <div className="h-[100px] w-[100px] rounded-full mb-4 relative">    
-            <Image
-              alt={person.name.first}
-              src={person.picture.medium}
-              fill
-            />
+            <div className="h-[100px] w-[100px] rounded-full mb-4 relative">
+              <Image alt={person.name.first} src={person.picture.medium} fill />
             </div>
             <div className="flex flex-col justify-center text-center items-center p-5 gap-3">
               <h3 className="text-base font-semibold tracking-tight text-black">
