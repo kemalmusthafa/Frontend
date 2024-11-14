@@ -4,8 +4,15 @@ import HeadTeam from "@/components/teams";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+interface Person {
+  login: { uuid: string };
+  name: { first: string; last: string };
+  email: string;
+  picture: { medium: string };
+}
+
 export default function Teams() {
-  const [people, setPeople] = useState<any[]>([]);
+  const [people, setPeople] = useState<Person[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -57,15 +64,15 @@ export default function Teams() {
             role="list"
             className="grid gap-y-8 sm:grid-cols-2 sm:gap-8 xl:col-span-2 p-5"
           >
-            {people.map((person: any) => (
+            {people.map((person) => (
               <li key={person.login.uuid}>
                 <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left justify-center sm:justify-start gap-4 p-4 shadow-lg bg-white">
                   <div className="h-16 w-16 relative">
-                  <Image
-                    alt={person.name.first}
-                    src={person.picture.medium}
-                    fill
-                  />
+                    <Image
+                      alt={person.name.first}
+                      src={person.picture.medium}
+                      fill
+                    />
                   </div>
                   <div>
                     <h3 className="text-base font-semibold tracking-tight text-black">
