@@ -28,28 +28,35 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-base-200 text-black dark:text-white p-[50px]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <h2 className="text-xl md:text-2xl font-bold text-center">TESTIMONIALS</h2>
+    <section className="bg-base-200 text-black dark:text-white p-6 md:p-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center">
+          TESTIMONIALS
+        </h2>
         <div className="flex justify-center my-5">
           <Divider />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-10 bg-white rounded-t-[200px] rounded-br-[150px] shadow-md hover:shadow-lg transition-shadow"
+              className="flex flex-col items-center p-6 md:p-10 bg-white rounded-t-[150px] rounded-br-[100px] shadow-md hover:shadow-lg transition-shadow"
             >
-              <div className="w-32 h-32 rounded-full mb-4 relative">
-              <Image
-                src={testimonial.imgSrc}
-                alt={testimonial.name}
-                fill
-              />
+              <div className="flex w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-4 relative">
+                <Image
+                  src={testimonial.imgSrc}
+                  alt={testimonial.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <h4 className="text-black text-2xl font-semibold">{testimonial.name}</h4>
-              <p className="text-teal-700 font-mono">{testimonial.title}</p>
-              <p className="text-gray-700 text-center mt-4 italic">
+              <h4 className="text-black text-lg md:text-2xl font-semibold text-center">
+                {testimonial.name}
+              </h4>
+              <p className="text-teal-700 font-mono text-sm md:text-base text-center">
+                {testimonial.title}
+              </p>
+              <p className="text-gray-700 text-center mt-4 italic text-sm md:text-base">
                 {testimonial.feedback}
               </p>
             </div>

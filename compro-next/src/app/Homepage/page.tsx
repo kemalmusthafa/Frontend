@@ -37,7 +37,7 @@ export default async function Homepage() {
   const latestDataMan = dataMan.slice(5, 6);
   const latestDataWomen = dataWomen.slice(5, 6);
   return (
-    <div className="container max-w-screen-2xl flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <HeroSection />
       <div className="flex flex-col h-auto md:h-auto p-7">
         <h1 className="flex flex-1 justify-center items-center text-center text-xl lg:text-2xl font-bold">
