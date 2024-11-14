@@ -60,12 +60,12 @@ export default function Product() {
             and quality, making it easy to mix, match, and stand out. Explore
             the looks made for you!
           </p>
-          <h1 className="text-center text-xl lg:text-2xl font-bold">MENS</h1>
+          <h1 className="text-center text-xl lg:text-2xl font-bold">MEN</h1>
           <div className="flex justify-center">
             <Divider />
           </div>
           <ProductMan />
-          <h1 className="text-center text-xl lg:text-2xl font-bold">WOMENS</h1>
+          <h1 className="text-center text-xl lg:text-2xl font-bold">WOMEN</h1>
           <div className="flex justify-center">
             <Divider />
           </div>

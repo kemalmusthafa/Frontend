@@ -40,7 +40,7 @@ export default async function Homepage() {
   const latestDataWomen = dataWomen.slice(5, 6);
 
   return (
-    <div className="h-auto w-full">
+    <div className="h-auto w-full overflow-hidden">
       <HeroSection />
 
       <div className="container mx-auto p-5 sm:px-7 lg:px-10">
@@ -81,7 +81,7 @@ export default async function Homepage() {
             but also feels great to wear.
           </p>
         </div>
-        <div className="flex flex-row bg-teal-700 h-[80px] w-[300px] md:h-[100px] md:w-[600px] justify-between px-4 md:px-12 md:absolute md:mt-[370px] gap-5">
+        <div className="flex flex-row bg-teal-700 h-[80px] w-[300px] md:h-[100px] md:w-[600px] justify-between px-4 md:px-12 md:absolute md:mt-[380px] gap-5">
           <div className="flex flex-col justify-center items-center text-center text-xs md:textarea-md font-bold">
             <div>10.000+</div>
             <div>Selling Products</div>
@@ -97,9 +97,9 @@ export default async function Homepage() {
         </div>
       </div>
 
-      <div className="container mx-auto px-5 sm:px-7 lg:px-10 py-10 bg-base-200 text-base-content">
+      <div className="w-full mx-auto px-5 sm:px-7 lg:px-10 py-10 bg-base-200 text-base-content">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-5">
-          <div className="flex flex-col justify-start items-start text-start gap-5 p-5">
+          <div className="flex flex-col justify-start items-start gap-5 p-5 w-full max-w-sm">
             <h1 className="text-xl sm:text-2xl font-bold">
               BEST SELLER PRODUCT
             </h1>
@@ -118,41 +118,39 @@ export default async function Homepage() {
               GET NOW !
             </Link>
           </div>
-          <div className="flex flex-col md:flex-row gap-5">
-            {latestDataMan.map((item, idx) => {
-              return (
-                <div
-                  key={idx}
-                  className="flex h-[300px] w-[300px] justify-center items-end relative"
-                >
-                  <Image
-                    src={`https:${item.fields.thumbnail.fields.file.url}`}
-                    alt={item.fields.title}
-                    fill
-                  />
-                  <div className="flex bg-base-300 text-base-content h-[100px] w-[300px] text-md font-bold font-mono justify-center items-center absolute">
-                    {item.fields.title}
-                  </div>
+          <div className="flex flex-wrap gap-5 justify-center">
+            {latestDataMan.map((item, idx) => (
+              <div
+                key={idx}
+                className="relative h-[300px] w-[300px] overflow-hidden"
+              >
+                <Image
+                  src={`https:${item.fields.thumbnail.fields.file.url}`}
+                  alt={item.fields.title}
+                  layout="fill"
+                  objectFit="cover"
+                />
+                <div className="absolute bottom-0 bg-base-300 text-base-content h-[60px] w-full text-md font-bold font-mono flex justify-center items-center">
+                  {item.fields.title}
                 </div>
-              );
-            })}
-            {latestDataWomen.map((item, idx) => {
-              return (
-                <div
-                  key={idx}
-                  className="flex h-[300px] w-[300px] justify-center items-end relative"
-                >
-                  <Image
-                    src={`https:${item.fields.thumbnail.fields.file.url}`}
-                    alt={item.fields.title}
-                    fill
-                  />
-                  <div className="flex bg-base-300 text-base-content h-[100px] w-[300px] text-md font-bold font-mono justify-center items-center absolute">
-                    {item.fields.title}
-                  </div>
+              </div>
+            ))}
+            {latestDataWomen.map((item, idx) => (
+              <div
+                key={idx}
+                className="relative h-[300px] w-[300px] overflow-hidden"
+              >
+                <Image
+                  src={`https:${item.fields.thumbnail.fields.file.url}`}
+                  alt={item.fields.title}
+                  layout="fill"
+                  objectFit="cover"
+                />
+                <div className="absolute bottom-0 bg-base-300 text-base-content h-[60px] w-full text-md font-bold font-mono flex justify-center items-center">
+                  {item.fields.title}
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -171,13 +169,19 @@ export default async function Homepage() {
         </p>
 
         <h2 className="text-center text-lg sm:text-xl lg:text-2xl font-bold mb-5">
-          MENS
+          MEN
         </h2>
+        <div className="flex justify-center m-5">
+          <Divider />
+        </div>
         <ProductMan />
 
         <h2 className="text-center text-lg sm:text-xl lg:text-2xl font-bold mt-10 mb-5">
-          WOMENS
+          WOMEN
         </h2>
+        <div className="flex justify-center m-5">
+          <Divider />
+        </div>
         <ProductWomen />
       </div>
 

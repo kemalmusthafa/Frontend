@@ -18,15 +18,15 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="container max-w-screen-2xl flex flex-col">
-      <div
-        className="hero min-h-screen bg-cover bg-center"
-        style={{
-          backgroundImage: isMobile
-            ? `url("/bannermb.png")`
-            : `url("/banner.png")`,
-        }}
-      >
+<div className="w-screen h-screen overflow-hidden">
+  <div
+    className="hero w-full h-full bg-cover bg-center bg-no-repeat"
+    style={{
+      backgroundImage: isMobile
+        ? `url("/bannermb.png")`
+        : `url("/banner.png")`,
+    }}
+  >
         <div className="hero-overlay bg-opacity-40"></div>
         <div className="hero justify-end items-end text-neutral-content text-end p-10 md:p-24 md:py-[400px]">
           <div className="max-w-md m-5 mt-[400px] md:mt-[90px]">
@@ -42,7 +42,8 @@ export default function HeroSection() {
             </Link>
           </div>
         </div>
-      </div>
-    </div>
+  </div>
+</div>
+
   );
 }
