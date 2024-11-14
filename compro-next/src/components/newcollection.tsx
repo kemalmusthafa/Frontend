@@ -13,7 +13,7 @@ export default async function NewCollection() {
       {latestData.map((item, idx) => (
         <div
           key={idx}
-          className="flex h-[400px] w-[400px] justify-center items-end relative"
+          className="flex h-[300px] w-[300px] md:h-[400px] md:w-[400px] justify-center items-end relative"
         >
           <Image
             src={`https:${item.fields.thumbnail.fields.file.url}`}
