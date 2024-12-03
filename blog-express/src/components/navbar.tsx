@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Avatar } from "./avatar";
 
 export default function Navbar() {
   return (
@@ -24,15 +25,7 @@ export default function Navbar() {
             Blog
           </Link>
         </div>
-        <Link href={"/"} className="flex items-center text-2xl">
-          <Image
-            src="/icons8-search.svg"
-            alt="search"
-            width={20}
-            height={20}
-            className="w-5 h-5 md:w-6 md:h-6"
-          />
-        </Link>
+        <Avatar />
       </nav>
     </div>
   );
