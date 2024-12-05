@@ -6,7 +6,7 @@ import { TbWorld } from "react-icons/tb";
 
 export default function Navbar() {
   return (
-    <div className="flex navbar shadow-md fixed z-50 w-screen bg-white dark:bg-black md:px-20">
+    <div className="flex navbar shadow-md fixed z-50 w-full bg-white dark:bg-black md:px-20">
       <div className="navbar-start">
         <div className="dropdown">
           <button

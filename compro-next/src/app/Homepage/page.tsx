@@ -40,7 +40,7 @@ export default async function Homepage() {
   const latestDataWomen = dataWomen.slice(5, 6);
 
   return (
-    <div className="h-auto w-full overflow-hidden">
+    <div className="h-auto w-screen overflow-x-hidden">
       <HeroSection />
 
       <div className="container mx-auto p-5 sm:px-7 lg:px-10">
@@ -97,7 +97,7 @@ export default async function Homepage() {
         </div>
       </div>
 
-      <div className="w-full mx-auto px-5 sm:px-7 lg:px-10 py-10 bg-base-200 text-base-content">
+      <div className="w-full overflow-hidden mx-auto px-5 sm:px-7 lg:px-10 py-10 bg-base-200 text-base-content">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-5">
           <div className="flex flex-col justify-start items-start gap-5 p-5 w-full max-w-sm">
             <h1 className="text-xl sm:text-2xl font-bold">
@@ -184,7 +184,6 @@ export default async function Homepage() {
         </div>
         <ProductWomen />
       </div>
-
       <Testimonials />
     </div>
   );

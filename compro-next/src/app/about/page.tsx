@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/about.png",
-        width: 1200,
+        width: 800,
         height: 800,
         alt: "MSTH. - Home"
       }
@@ -30,7 +30,7 @@ export default function About() {
       <div className="hero bg-white dark:bg-black min-h-screen">
         <div className="hero-content flex-col lg:flex-row items-center">
           <div className="w-full max-w-screen-lg object-cover shadow-2xl">
-            <div className="h-[300px] w-[400px] md:h-[500px] md:w-[650px] relative">
+            <div className="h-[300px] w-[350px] md:h-[500px] md:w-[650px] relative">
             <Image
               src="/banner1.png"
               alt="banner"

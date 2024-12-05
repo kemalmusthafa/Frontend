@@ -37,7 +37,7 @@ export default function TeamsComponent() {
 
   return (
     <div
-      className="hero bg-base-100 min-h-screen px-4 py-10 sm:px-10"
+      className="hero bg-base-100 min-h-screen px-4 py-10 sm:px-10 overflow-x-hidden"
       style={{
         backgroundImage: "url('/banner.svg')",
         backgroundSize: "cover",
