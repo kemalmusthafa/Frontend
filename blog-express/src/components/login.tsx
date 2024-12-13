@@ -1,5 +1,6 @@
 "use client";
 
+import { useSession } from "@/context/useSession";
 import { Field, Form, Formik, FormikProps } from "formik";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -20,16 +21,18 @@ interface FormValues {
 
 function FormLogin() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { setIsAuth, setUser } = useSession();
   const router = useRouter();
   const initialValue: FormValues = {
     data: "",
     password: "",
   };
 
+  const base_url = process.env.NEXT_BASE_URL_BE;
   const handleAdd = async (user: FormValues) => {
     try {
       setIsLoading(true);
-      const res = await fetch("http://localhost:8000/api/auth/login", {
+      const res = await fetch(`${base_url}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,6 +42,8 @@ function FormLogin() {
       });
       const result = await res.json();
       if (!res.ok) throw result;
+      setIsAuth(true);
+      setUser(result.user);
       router.push("/");
       toast.success(result.message);
     } catch (err: any) {

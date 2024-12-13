@@ -56,9 +56,7 @@ const AvatarMenu = ({
           <p className="text-sm font-medium text-gray-900 truncate">
             {user?.username}
           </p>
-          <p className="text-sm text-gray-500 truncate">
-            {user?.email}
-          </p>
+          <p className="text-sm text-gray-500 truncate">{user?.email}</p>
         </div>
       </div>
 
@@ -74,6 +72,17 @@ const AvatarMenu = ({
                 Profile
               </button>
             </li>
+            {user?.role == "Admin" && (
+              <li>
+                <button
+                  onClick={() => router.push("/blog/create")}
+                  className="block w-full px-4 py-2 text
+                  text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  Create Blog
+                </button>
+              </li>
+            )}
             <li>
               <button
                 onClick={onLogout}

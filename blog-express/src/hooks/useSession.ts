@@ -4,10 +4,11 @@ import { useEffect, useState } from "react";
 const useSession = () => {
   const [isAuth, setIsAuth] = useState<boolean>(false);
   const [user, setUser] = useState<IUser | null>(null);
+  const base_url = process.env.NEXT_BASE_URL_BE;
 
   const checkSession = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/users/profile", {
+      const res = await fetch(`${base_url}/users/profile`, {
         method: "GET",
         credentials: "include",
       });

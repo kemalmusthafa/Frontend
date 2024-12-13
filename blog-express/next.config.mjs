@@ -26,7 +26,11 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "www.dailysia.com",
             },
-            { 
+            {
+                protocol: "https",
+                hostname: "res.cloudinary.com",
+            },
+            {  
                 hostname: "localhost",
             }
         ]

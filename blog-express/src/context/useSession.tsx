@@ -16,6 +16,7 @@ interface SessionContextProps {
   setUser: (user: IUser | null) => void;
 }
 
+const base_url = process.env.NEXT_BASE_URL_BE;
 const SessionContext = createContext<SessionContextProps | undefined>(
   undefined
 );
@@ -28,7 +29,7 @@ export const SessionProvider: React.FC<{ children: ReactNode }> = ({
 
   const checkSession = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/users/profile", {
+      const res = await fetch(`${base_url}/users/profile`, {
         method: "GET",
         credentials: "include",
       });
